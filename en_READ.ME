@@ -1,0 +1,52 @@
+Creating a DNS Resolver in Python3
+
+The code below allows you to pass a domain and returns the corresponding IP using Python’s gethostbyname function.
+⚠️ For educational purposes only • Developed by M!ss s3c
+
+📝 Guide: Creating and Running Your First DNS Resolver in Python
+
+1. Create the script file
+
+In the terminal, create the file:
+
+nano script8.1.py
+
+2. Add the Python code
+
+Paste the following code:
+
+#!/usr/bin/python3
+# Educational DNS Resolver in Python
+# Usage: python3 script8.1.py <domain>
+
+import socket
+import sys
+
+# Check if the domain was provided as an argument
+if len(sys.argv) != 2:
+    print("Usage: python3 script8.1.py <domain>")
+    sys.exit(1)
+
+host = sys.argv[1]
+
+# Returns the IP corresponding to the domain
+print(f"{host} ---> {socket.gethostbyname(host)}")
+
+
+⚠️ Note: This script is for educational purposes only and should not be used to collect information without authorization.
+
+3. Run the script
+python3 script8.1.py example.com
+
+4. Example output
+example.com ---> 93.184.216.34
+
+👉 What you learned here
+
+socket.gethostbyname() → resolves a domain to its IP address.
+
+sys.argv → captures command-line arguments.
+
+len(sys.argv) → validates the number of arguments provided.
+
+sys.exit() → exits the script when necessary.
